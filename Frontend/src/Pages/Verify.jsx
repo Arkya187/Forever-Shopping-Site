@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const Verify = () => {
 
-    const {navigate,token,setCartItems} = useContext(ShopContext)
+    const {navigate,token,setCartItems,backendUrl} = useContext(ShopContext)
     const [searchParams,setSearchParams] = useSearchParams();
     const success = searchParams.get('success')
     const orderId = searchParams.get('orderId')
@@ -17,7 +17,7 @@ const Verify = () => {
                 return null;
             }
             const session_id = searchParams.get('session_id');
-            const response = await axios.post('/api/order/verifyStripe', {
+            const response = await axios.post(backendUrl+'/api/order/verifyStripe', {
             success: searchParams.get('success') === 'true',
             session_id
             }, {
