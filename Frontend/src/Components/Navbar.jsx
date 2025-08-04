@@ -33,6 +33,7 @@ const Navbar = () => {
             <p>CONTACT</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
         </NavLink>
+        <a href="https://forever-admin-teal.vercel.app/">ADMIN</a>
       </ul>
       <div className='flex items-center gap-6'>
         <img onClick={()=>setShowSearch(!showSearch)} src={assets.search_icon} className='w-5 cursor-pointer' alt="" />
